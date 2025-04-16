@@ -16,6 +16,20 @@ Features:
 - Trading Analysis: Find the best single trade (buy-sell combination) for maximum profit.
 - Price Similarity Analysis: Calculate a minimum spanning tree weight of price similarities.
 
+Prerequisites:
+- C++ compiler (supporting C++11 or later)
+- CSV file containing stock data in the following format:
+  ```
+  Date,Open,High,Low,Close,Adj Close,Volume
+  2023-04-14,165.05,166.45,164.49,165.21,164.83,52402400
+  ```
+
+Compilation:
+Compile the program using your C++ compiler:
+```
+g++ stockanalysis.cpp -o stockanalysis
+```
+
 Running the Program:
 1. Run the executable:
    ```
