@@ -1,0 +1,22 @@
+name: Build and Run C++ Code
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install g++
+        run: sudo apt-get update && sudo apt-get install -y g++
+
+      - name: Build
+        run: g++ -o stock_analysis main.cpp
+
+      - name: Run with data file
+        run: echo "data.csv" | ./stock_analysis
